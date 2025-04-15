@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LanguageLearn.ai || L².ai</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="checkforsysprompt()">
+
+    <!-- <div class="backgroundvideo">
+        <video src="cicada_tree.webm" width="90%" height="90%" autoplay loop muted poster="path-to-poster.jpg"
+            preload="auto" playsinline>
+            <source src="cicada_tree.webm" type="video/webm">
+        </video>
+    </div> -->
+
+
+    <div class="topbar">
+        <h1>LanguageLearn.ai</h1>
+        <div class="links">
+            <p style="margin-left: 440px;">Pricing</p>
+            <p>About Us</p>
+            <p>Products</p>
+            <p>Account</p>
+        </div>
+    </div><br><br><br>
+
+
+
+    <div class="box">
+        <center>
+            <h1 class="bigblackheading">Learning languages just made Simple</h1>
+            <p class="somewebinfo">Experience the transformative power of language learning <br> through engaging
+                conversations with Ai.</p>
+
+            <!-- <div class="icon-container"><img src="Fire.png" alt="3D Icon" class="floating-icon"></div> -->
+            <button onclick="location.href='#formcontainer';">Start Learning</button>
+        </center>
+    </div>
+
+
+
+
+    <!-- <div class="separator">
+        <div class="straightline">
+            <div class="squareblock"></div>
+        </div>
+    </div> -->
+
+    <center>
+        <br><br>
+        <div class="formcontainer" id="formcontainer">
+
+            <h1 class="infoh1">Please give us some info to continue</h1>
+
+            <div class="formbox">
+
+                <br>
+                <p style="margin-left: 9px; margin-bottom: 10px;">Your Full Name :</p>
+                <input id="username" type="text" placeholder="ex : john doe">
+
+                <p style="margin-left: 11px; margin-top: 25px; margin-bottom: 10px;">What is your mother tounge ??</p>
+                <input id="mothertounge" type="text" placeholder="ex : Hindi">
+
+                <p style="margin-left: 11px; margin-top: 25px; margin-bottom: 10px;">Which language you want to learn ??
+                </p>
+
+                <select name="langsselect" id="selectlanguage">
+                    <option value="ENGLISH">ENGLISH</option>
+                    <option value="SPANISH">SPANISH</option>
+                    <option value="FRENCH">FRENCH</option>
+                    <option value="MANDARIAN CHINESE">MANDARIAN CHINESE</option>
+                    <option value="PORTUGUESE">PORTUGUESE</option>
+                </select>
+
+
+                <p style="margin-left: 11px; margin-top: 25px; margin-bottom: 10px;">Currently you are ?</p>
+                <select name="levelofunderstanding" id="lvlofunderstanding">
+                    <option value="BEGGINER">BEGGINER</option>
+                    <option value="INTERMIDIATE">INTERMIDIATE</option>
+                    <option value="ADVANCED">ADVANCED</option>
+                </select><br><br>
+
+                <button onclick="savetheuserdetails()">Let's start your journey</button>
+
+            </div>
+
+        </div>
+    </center><br><br><br>
+
+
+    <div class="aianduserconversationboxblur">
+        <div class="aianduserconversationbox">
+
+            <center>
+                <div class="extras_conversationbox">
+                    <div class="extras">
+                        <button class="closebtn" onclick="hideaichattigwindow()">Close</button>
+
+                        <button onclick="startVoiceChat()">Voice Mode&nbsp;<i class="fa fa-microphone"></i></button>
+                        <div class="visualiser"></div>
+                        <button onclick="stopVoiceChat()" style="color: red; font-size: 14px; margin-top: 100px;">Stop Voice Chat</button>
+
+                    </div>
+        
+                    
+                        <div id="conversation">
+                            <!-- Conversation will be displayed here -->
+                        </div>
+                    
+                </div>
+            </center>
+
+            <center>
+                <div class="textareaandbtnbox">
+                    <input id="user-input" type="text" placeholder="Type your message...">
+                    <button class="sendbtn" onclick="sendMessage()"><i class="fas fa-arrow-up"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </center>
+        </div>
+    </div>
+
+
+    <button class="chatwithypr" onclick="showaichattigwindow()"></button>
+
+
+
+    <script src="script.js"></script>
+    <!-- <script src="voicechatting.js"></script> -->
+</body>
+
+</html>
